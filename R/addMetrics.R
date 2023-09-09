@@ -37,27 +37,10 @@
 #' }
 addQCMetrics_seu <- function(seu){
   ## Per cell
-  seu$percent.mt <- Seurat::PercentageFeatureSet(seu, pattern = "^MT-")
-  
-  libsize_drop <- scuttle::isOutlier(
-    metric = as.numeric(unlist(seu@meta.data[, grepl(paste0("nCount_", names(seu@assays)[1]), 
-                                                     colnames(seu@meta.data))])), 
-    type = "lower",
-    log = TRUE) 
-  
-  mito_drop <- scuttle::isOutlier(
-    metric = seu$percent.mt,
-    type = "higher") 
-  
-  seu$libsize_drop <- libsize_drop
-  seu$mito_drop <- mito_drop
+  addQCMetricsPerCell_seu(seu)
   
   ## Per gene
-  gene_means <- as.numeric(unlist(rowMeans(Seurat::GetAssayData(seu, "counts"), na.rm = TRUE)))
-  lowgenecount_drop <- log(gene_means) < -5 | gene_means <= 0
-  
-  seu[[names(seu@assays)[1]]][["means"]] <- gene_means
-  seu[[names(seu@assays)[1]]][["lowgenecount_drop"]] <- lowgenecount_drop
+  addQCMetricsPerGene_seu(seu)
   
   return(seu)
 }
@@ -145,7 +128,7 @@ addQCMetricsPerCell_seu <- function(seu){
 #' }
 addQCMetricsPerGene_seu <- function(seu){
   ## Per gene
-  gene_means <- as.numeric(unlist(rowMeans(Seurat::GetAssayData(seu, "counts"), na.rm = TRUE)))
+  gene_means <- as.numeric(unlist(MatrixGenerics::rowMeans(Seurat::GetAssayData(seu, "counts"), na.rm = TRUE)))
   lowgenecount_drop <- log(gene_means) < -5 | gene_means <= 0
   
   seu[[names(seu@assays)[1]]][["means"]] <- gene_means
