@@ -37,10 +37,10 @@
 #' }
 addQCMetrics_seu <- function(seu){
   ## Per cell
-  addQCMetricsPerCell_seu(seu)
+  seu <- addQCMetricsPerCell_seu(seu)
   
   ## Per gene
-  addQCMetricsPerGene_seu(seu)
+  seu <- addQCMetricsPerGene_seu(seu)
   
   return(seu)
 }
