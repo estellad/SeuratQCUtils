@@ -1,0 +1,11 @@
+export(plotHist)
+export(plot_Hist_Low_Lib_Sizes)
+export(plot_Hist_High_Mito_Props)
+export(plot_Hist_Low_Abun_Genes)
+
+export(addQCMetrics_seu)
+export(addQCMetricsPerCell_seu)
+export(addQCMetricsPerGene_seu)
+
+export(plotQCSpatial_seu)
+export(plotBar_seu)

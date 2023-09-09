@@ -1,0 +1,12 @@
+Package: SeuratQCUtils
+Type: Package
+Title: QC helper functions for Seurat Object
+Version: 0.1.0
+Author: Estella Yixing Dong
+Maintainer: Estella Yixing Dong <estelladong729@gmail.com>
+Description: Preprocess and plot QC result histogram or spatial features, inspired by OSCA book. 
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports: Seurat, scuttle, ggplot2, hrbrthemes, grid, gridExtra, tibble, scater, dplyr
+RoxygenNote: 7.2.3
