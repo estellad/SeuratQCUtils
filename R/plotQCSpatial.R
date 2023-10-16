@@ -8,6 +8,8 @@
 #' @return A spatial QC plot highlighting spots to be removed after QC in red.
 #' @export
 #'
+#' @importFrom ggplot2 ggplot aes geom_point coord_fixed scale_color_manual ggtitle theme_bw theme element_blank
+#' 
 #' @examples
 #' \dontrun{
 #' ## Visium Example
