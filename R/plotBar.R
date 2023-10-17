@@ -1,3 +1,5 @@
+#' Cell-type frequency bar plot
+#' 
 #' Create cell-type frequency bar plot in annotated Seurat object
 #'
 #' @param seu A Seurat object contains "Annotation" column in the meta data

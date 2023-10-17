@@ -1,3 +1,5 @@
+#' Spatial QC plot for binary flags
+#' 
 #' Inspired by ggspavis in OSTA book, spatial QC plot for binary flags, such 
 #' as `libsize_drop`, to see which spots or cells have not pass QC check in 
 #' `addQCMetrics_seu()`. 

@@ -2,9 +2,7 @@
 % Please edit documentation in R/plotQCSpatial.R
 \name{plotQCSpatial_seu}
 \alias{plotQCSpatial_seu}
-\title{Inspired by ggspavis in OSTA book, spatial QC plot for binary flags, such 
-as `libsize_drop`, to see which spots or cells have not pass QC check in 
-`addQCMetrics_seu()`.}
+\title{Spatial QC plot for binary flags}
 \usage{
 plotQCSpatial_seu(seu_sp, flag = "libsize_drop")
 }

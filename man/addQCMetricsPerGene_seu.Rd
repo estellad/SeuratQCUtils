@@ -2,8 +2,7 @@
 % Please edit documentation in R/addMetrics.R
 \name{addQCMetricsPerGene_seu}
 \alias{addQCMetricsPerGene_seu}
-\title{Inspired by OSCA book, the following function automatically adds gene-wise  
-QC metric on low abundance genes to a Seurat object and store for later use.}
+\title{Add gene-wise QC metrics}
 \usage{
 addQCMetricsPerGene_seu(seu)
 }

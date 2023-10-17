@@ -2,8 +2,7 @@
 % Please edit documentation in R/plotHistograms.R
 \name{plotHist}
 \alias{plotHist}
-\title{A generic histogram plotting function that will be used for gene-wise and 
-cell-wise QC flags on their corresponding continuous variables.}
+\title{A generic histogram plotting function}
 \usage{
 plotHist(plot_df, xvar = "logtotal", yvar = "libsize_drop")
 }
