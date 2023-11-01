@@ -2,7 +2,7 @@
 % Please edit documentation in R/plotBar.R
 \name{plotBar_seu}
 \alias{plotBar_seu}
-\title{Create cell-type frequency bar plot in annotated Seurat object}
+\title{Cell-type frequency bar plot}
 \usage{
 plotBar_seu(
   seu,

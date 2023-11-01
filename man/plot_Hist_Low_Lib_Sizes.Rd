@@ -2,10 +2,7 @@
 % Please edit documentation in R/plotHistograms.R
 \name{plot_Hist_Low_Lib_Sizes}
 \alias{plot_Hist_Low_Lib_Sizes}
-\title{A per-cell library size QC histogram that takes a Seurat object that has  
-been preprocessed with `SeuratQCUtils::addQCMetrics()`, such that flag 
-`libsize_drop` exists in meta.data. This function sources helper function to 
-generate histogram with `SeuratQCUtils::plotHist()`.}
+\title{A per-cell library size QC histogram}
 \usage{
 plot_Hist_Low_Lib_Sizes(seu, yvar = "libsize_drop")
 }

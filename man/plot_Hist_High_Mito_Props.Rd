@@ -2,11 +2,7 @@
 % Please edit documentation in R/plotHistograms.R
 \name{plot_Hist_High_Mito_Props}
 \alias{plot_Hist_High_Mito_Props}
-\title{A per-cell mitochondria percentage QC histogram that takes a Seurat object   
-that has been preprocessed with `SeuratQCUtils::addQCMetrics()`, such that  
-flag `mito_drop` and continuous variable `percent.mt` exist in meta.data.   
-This function sources helper function `SeuratQCUtils::plotHist()` to 
-generate histogram.}
+\title{A per-cell mitochondria percentage QC histogram}
 \usage{
 plot_Hist_High_Mito_Props(seu, yvar = "mito_drop")
 }

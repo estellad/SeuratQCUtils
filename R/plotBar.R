@@ -1,3 +1,5 @@
+#' Cell-type frequency bar plot
+#' 
 #' Create cell-type frequency bar plot in annotated Seurat object
 #'
 #' @param seu A Seurat object contains "Annotation" column in the meta data
@@ -10,6 +12,9 @@
 #' order for the input annotated Seurat object.
 #' @export
 #'
+#' @importFrom ggplot2 ggplot aes after_stat geom_bar theme element_text ggtitle ylab
+#' @importFrom hrbrthemes theme_ipsum
+#' 
 #' @examples
 #' \dontrun{
 #' data("pbmc_small")

@@ -8,5 +8,12 @@ Description: Preprocess and plot QC result histogram or spatial features, inspir
 License: MIT
 Encoding: UTF-8
 LazyData: true
-Imports: Seurat, scuttle, ggplot2, hrbrthemes, grid, gridExtra, tibble, scater, dplyr, MatrixGenerics
+Imports: 
+    Seurat,
+    scuttle,
+    tibble,
+    MatrixGenerics,
+    ggplot2,
+    dplyr,
+    hrbrthemes
 RoxygenNote: 7.2.3

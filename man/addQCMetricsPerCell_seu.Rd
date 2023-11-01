@@ -2,9 +2,7 @@
 % Please edit documentation in R/addMetrics.R
 \name{addQCMetricsPerCell_seu}
 \alias{addQCMetricsPerCell_seu}
-\title{Inspired by OSCA book, the following function automatically adds cell-wise 
-QC metrics on low library size and high mitochondria percentage to a Seurat 
-object and store for later use.}
+\title{Add cell-wise QC metrics}
 \usage{
 addQCMetricsPerCell_seu(seu)
 }

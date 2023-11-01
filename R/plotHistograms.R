@@ -1,3 +1,5 @@
+#' A generic histogram plotting function 
+#' 
 #' A generic histogram plotting function that will be used for gene-wise and 
 #' cell-wise QC flags on their corresponding continuous variables. 
 #'
@@ -10,6 +12,10 @@
 #'
 #' @return A histogram, colored by QC flag status. 
 #' @export
+#'
+#' @importFrom dplyr %>% 
+#' @importFrom ggplot2 ggplot aes geom_histogram scale_fill_manual labs xlab theme element_text
+#' @importFrom hrbrthemes theme_ipsum
 #'
 #' @examples
 #' \dontrun{
@@ -52,6 +58,8 @@ plotHist <- function(plot_df, xvar = "logtotal", yvar = "libsize_drop"){
   p
 }
 
+#' A per-cell library size QC histogram
+#' 
 #' A per-cell library size QC histogram that takes a Seurat object that has  
 #' been preprocessed with `SeuratQCUtils::addQCMetrics()`, such that flag 
 #' `libsize_drop` exists in meta.data. This function sources helper function to 
@@ -64,7 +72,9 @@ plotHist <- function(plot_df, xvar = "logtotal", yvar = "libsize_drop"){
 #'
 #' @return A histogram, colored by QC `libsize_drop` flag status. 
 #' @export
-#'
+#' 
+#' @importFrom ggplot2 ggplot xlab ylab ggtitle
+#' 
 #' @examples
 #' \dontrun{
 #' ## Chromium Example
@@ -116,6 +126,8 @@ plot_Hist_Low_Lib_Sizes <- function(seu, yvar = "libsize_drop"){
   p
 }
 
+#' A per-cell mitochondria percentage QC histogram
+#' 
 #' A per-cell mitochondria percentage QC histogram that takes a Seurat object   
 #' that has been preprocessed with `SeuratQCUtils::addQCMetrics()`, such that  
 #' flag `mito_drop` and continuous variable `percent.mt` exist in meta.data.   
@@ -130,6 +142,8 @@ plot_Hist_Low_Lib_Sizes <- function(seu, yvar = "libsize_drop"){
 #'
 #' @return A histogram, colored by QC `mito_drop` flag status. 
 #' @export
+#' 
+#' @importFrom ggplot2 xlab ylab ggtitle
 #'
 #' @examples
 #' \dontrun{
@@ -173,6 +187,8 @@ plot_Hist_High_Mito_Props <- function(seu, yvar = "mito_drop"){
   p
 }
 
+#' A per-gene abundance QC histogram
+#' 
 #' A per-gene abundance QC histogram that takes a Seurat object that has been 
 #' preprocessed with `SeuratQCUtils::addQCMetrics()`, such that flag 
 #' `lowgenecount_drop` and continuous variable gene `means` exist in row-wise
@@ -185,6 +201,8 @@ plot_Hist_High_Mito_Props <- function(seu, yvar = "mito_drop"){
 #' @return A histogram, colored by QC `lowgenecount_drop` flag status. 
 #' @export
 #'
+#' @importFrom ggplot2 xlab ylab ggtitle
+#' 
 #' @examples
 #' \dontrun{
 #' ## Chromium Example

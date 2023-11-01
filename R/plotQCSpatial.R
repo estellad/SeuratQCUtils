@@ -1,3 +1,5 @@
+#' Spatial QC plot for binary flags
+#' 
 #' Inspired by ggspavis in OSTA book, spatial QC plot for binary flags, such 
 #' as `libsize_drop`, to see which spots or cells have not pass QC check in 
 #' `addQCMetrics_seu()`. 
@@ -8,6 +10,8 @@
 #' @return A spatial QC plot highlighting spots to be removed after QC in red.
 #' @export
 #'
+#' @importFrom ggplot2 ggplot aes geom_point coord_fixed scale_color_manual ggtitle theme_bw theme element_blank
+#' 
 #' @examples
 #' \dontrun{
 #' ## Visium Example

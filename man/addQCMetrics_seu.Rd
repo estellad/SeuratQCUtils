@@ -2,11 +2,7 @@
 % Please edit documentation in R/addMetrics.R
 \name{addQCMetrics_seu}
 \alias{addQCMetrics_seu}
-\title{Inspired by OSCA book, the following function automatically adds gene-wise  
-and cell-wise QC metrics on low library size, high mitochondria percentage, 
-and low abundance genes to a Seurat object and store for later use. 
-`addQCMetrics_seu()` is the combination of `addQCMetricsPerCell_seu()` and 
-`addQCMetricsPerGene_seu()`.}
+\title{Add gene-wise and cell-wise QC metrics}
 \usage{
 addQCMetrics_seu(seu)
 }

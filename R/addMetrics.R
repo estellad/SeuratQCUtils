@@ -1,3 +1,5 @@
+#' Add gene-wise and cell-wise QC metrics
+#' 
 #' Inspired by OSCA book, the following function automatically adds gene-wise  
 #' and cell-wise QC metrics on low library size, high mitochondria percentage, 
 #' and low abundance genes to a Seurat object and store for later use. 
@@ -45,6 +47,8 @@ addQCMetrics_seu <- function(seu){
   return(seu)
 }
 
+#' Add cell-wise QC metrics
+#' 
 #' Inspired by OSCA book, the following function automatically adds cell-wise 
 #' QC metrics on low library size and high mitochondria percentage to a Seurat 
 #' object and store for later use. 
@@ -97,6 +101,8 @@ addQCMetricsPerCell_seu <- function(seu){
   return(seu)
 }
 
+#' Add gene-wise QC metrics
+#' 
 #' Inspired by OSCA book, the following function automatically adds gene-wise  
 #' QC metric on low abundance genes to a Seurat object and store for later use. 
 #'
